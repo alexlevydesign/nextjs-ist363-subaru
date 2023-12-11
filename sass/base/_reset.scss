@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6, p, body {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--starbucks-green);
+}
+ul, li {
+    list-style: none; /* removes bullets */
+    padding: 0;
+}
+* {
+    box-sizing: border-box; /* invert padding */
+}
+img {
+    vertical-align: top; /*removes white space below image */ 
+}

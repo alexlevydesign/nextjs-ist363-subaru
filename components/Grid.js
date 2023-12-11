@@ -1,8 +1,8 @@
 import styles from './grid.module.scss'
 
 const grid = ({children}) => {
-    return <ul className={styles.grid}>
+    return <section className={styles.grid}>
         {children}
-    </ul>
+    </section>
 }
 export default grid;
