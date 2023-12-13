@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import Container from '../../Components/Container';
-import FilterBar from '../../components/FilterBar'
-import Grid from '../../Components/Grid';
+import Container from '../../components/Container';
+import FilterBar from '../../components/FilterBar';
+import Grid from '../../components/Grid';
 
 import Layout from '../../components/Layout';
 
