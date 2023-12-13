@@ -1,8 +1,7 @@
-import {useState} from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './filterbar.module.scss';
-import react from 'react';
+
 
 const cx = classNames.bind(styles); 
 
