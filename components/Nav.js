@@ -35,7 +35,7 @@ Nav.Desktop = Desktop;
 
 const Mobile = ({closeHandler}) => {
     const navItems = getMobileNavItems();
-    const sectionVariants = {
+    const mobileNavVariants = {
         closed: {
             left: '-100%'
         },

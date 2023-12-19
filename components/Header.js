@@ -23,7 +23,6 @@ const Header = () => {
             <ButtonUI icon="menu" clickHandler={() => {
                 setIsMobileNavOpen(true);
             }} />
-            <Nav.Mobile />
             <AnimatePresence>
             {isMobileNavOpen && <Nav.Mobile closeHandler={() => {
                 setIsMobileNavOpen(false);

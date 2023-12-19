@@ -5,7 +5,7 @@ import styles from './button.module.scss';
 let cx =classnames.bind(styles);
 
 const Button = ({
-    label,
+    children,
     type
 }) => {
     let buttonClasses = cx({
@@ -14,7 +14,9 @@ const Button = ({
         secondary : type === 'secondary'
     })
 
-    return <button className={buttonClasses}>{label}</button>
+    return <button className={buttonClasses}>
+    {children}
+    </button>
 }
 
 export default Button;
