@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Container from '../../components/Container';
 import FilterBar from '../../components/FilterBar';
 import Grid from '../../components/Grid';
-
+import Heading from '../../components/Heading';
 import Layout from '../../components/Layout';
 
 import { getAllVehicles, getVehicleTypes } from '../../lib/api';
@@ -43,7 +43,19 @@ const filteredVehicles = activeVehicleType === 'all' ? vehicles : vehicles.filte
 });
     
     return <Layout>
-        <h1>Vehicles</h1>
+        <Heading
+        level={1}
+        color="black"
+        textAlign="center"
+        marginBottom={6}
+        marginTop={6}
+        marginLeft={0}
+        marginRight={0}
+        paddingBottom={2}
+        paddingTop={2}
+        paddingLeft={2}
+        paddingRight={10}
+        >Vehicles</Heading>
         <Container>
             <FilterBar items={vehicleTypes} activeItem={activeVehicleType} setActiveItem={setActiveVehicleType} />
             <Grid 
