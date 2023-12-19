@@ -7,11 +7,11 @@ const cx = classnames.bind(styles);
    
 
 const ButtonUI = ({clickHandler, icon}) => {
-    const buttonClasses = cx({
+    const btnClasses = cx({
         btnui: true,
         close: icon === 'close'
     });
-    return <button className={styles.btnui}
+    return <button className={btnClasses}
     onClick={clickHandler}>
         <Image
             src={`/images/icons/${icon}.svg`}

@@ -71,8 +71,9 @@ const Mobile = ({closeHandler}) => {
     variants={mobileNavVariants}>
         <ButtonUI icon="close"
         clickHandler={closeHandler} />
-         <motion.ul className={styles.nav__list}>
+         <motion.ul className={styles.nav__list}
          variants={listVariants}
+         >
             {navItems.map((navItem, index) => {
                 const { label, slug} = navItem;
                 return <motion.li key={index} className={styles.nav__list__item}
