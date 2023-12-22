@@ -3,8 +3,10 @@ import {useState} from 'react';
 import { AnimatePresence } from 'framer-motion';
 import ButtonUI from './ButtonUI';
 
+import Link from 'next/link';
+
 import Container from './Container';
-import styles from './header.module.scss'
+import styles from './header.module.scss';
 import Logo from './Logo'
 import Nav from './Nav';
 import Row from './Row';
@@ -14,9 +16,9 @@ const Header = () => {
     return <header className={styles.header}>
     <Container>
         <Row justifyContent="space-between">
-            <Logo>
-
-            </Logo>
+            <Link href="/">
+            <Logo />
+            </Link>
             <Nav.Desktop>
 
             </Nav.Desktop>

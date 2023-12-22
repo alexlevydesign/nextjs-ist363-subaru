@@ -1,3 +1,5 @@
+import {scroller} from 'react-scroll';
+
 import Button from './Button';
 import Image from 'next/image';
 import Heading from './Heading';
@@ -21,7 +23,14 @@ const Showcase = ({featuredImage, subtitle, title}) => {
             2024 {subtitle}
         </Heading>
         <Heading level={1} color="white" marginBottom={2}>{title}</Heading>
-        <Button type="primary">Learn more</Button>
+        <Button type="primary" clickHandler={() => {
+            scroller.scrollTo("main-content", {
+                duration: 800,
+                delay: 0,
+                smooth: true
+            });
+        }}
+        >Learn more</Button>
     </div>
          
     </section>

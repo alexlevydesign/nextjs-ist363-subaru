@@ -5,6 +5,18 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import Paragraph from './Paragraph';
 
+const convertPriceToFormattedString = (price) => {
+    // turn the integer 22999 into a string "22,999"
+    let priceArray = price.toString().split('');
+
+    // turn the integer into an array [2,2,9,9,9]
+    for (let i = priceArray.length - 3; i > 0; i -= 3) {
+        priceArray.splice(i, 0, ',');
+    }
+    return '$' + priceArray.join('');
+
+    //start from the end of the array and insert a comma every three digits
+}
 
 
 const grid = ({items}) => {
@@ -39,6 +51,7 @@ const grid = ({items}) => {
             const {trimLevels} = vehicleInformation
             return <motion.article key={index}
             variants={articleVariants}
+            className={styles.grid__item}
             >
             {trimLevels && trimLevels[0].images.thumbnail &&
             <Image
@@ -53,10 +66,14 @@ const grid = ({items}) => {
                 color="black"
                 >
                 {title}
-                </Heading> 
-                <Paragraph>
-                    Starting at $25,000
+                </Heading>
+                {trimLevels[0].msrp &&
+                    <Paragraph>
+                    Starting at {convertPriceToFormattedString(trimLevels[0].msrp)}
                 </Paragraph>
+                
+                }
+                
                 <Paragraph>
                 <Link href={`/vehicles/${slug}`}>Learn more</Link>
                 </Paragraph>

@@ -1,0 +1,48 @@
+@use '../sass/abstracts/_vars';
+
+.calltoaction {
+    padding: 1rem 0;
+    background-color: black;
+    margin-top: 1rem;
+}
+
+.calltoaction [class*="container"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.calltoaction [class*="row"] {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.link__primary, .link__secondary {
+    background-color: white;
+    padding: .75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.link__primary {
+    background-color: vars.$color__primary;
+}
+.link__secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+// .calltoaction__row {
+//     display: flex;
+//     gap: .5rem;
+// }
+
+// .calltoaction {
+//     &__container {
+//         display: none;
+//     }
+// }

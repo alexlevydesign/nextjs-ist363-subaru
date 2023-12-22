@@ -6,6 +6,7 @@ let cx =classnames.bind(styles);
 
 const Button = ({
     children,
+    clickHandler,
     type
 }) => {
     let buttonClasses = cx({
@@ -14,7 +15,7 @@ const Button = ({
         secondary : type === 'secondary'
     })
 
-    return <button className={buttonClasses}>
+    return <button className={buttonClasses} onClick={clickHandler}>
     {children}
     </button>
 }
